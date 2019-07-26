@@ -18,7 +18,6 @@ function hide() {
 
 
 function show(timeout, text) {
-    console.log('show method : ', text);
     if (!document.getElementById(config.WRAPPER_ID).hasChildNodes()) {
         // Use default timeout if not set.
         let renderTimeout = timeout || config.AD_DURATION;
@@ -80,10 +79,8 @@ function createShowQueue(initialRecallDelay = 500, recallDelayIncrement = 500) {
     };
 
     return (timeout = config.AD_DURATION, text) => {
-
         this.msgs.push({timeout, text});
-        console.log('push')
-        console.table(this.msgs)
+        console.table(this.msgs);
         if (!this.isNotifying) {
             this.showNotify();
         }

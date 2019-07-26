@@ -15,7 +15,6 @@ class Notification extends PureComponent {
 
     animateState() {
         setTimeout(() => {
-            console.log('show notification', )
             this.updateStyle(true);
         }, 100);
 

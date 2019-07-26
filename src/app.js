@@ -25,7 +25,6 @@ class App extends Component {
     }
 
     handleIO = (data) => {
-        console.table(data);
         const { count } = data;
 
         if(count === config.MIN_THRESHOLD) {
