@@ -1,0 +1,51 @@
+.notification {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: opacity .8s ease-in-out,transform 1.2s ease-in-out;
+    will-change: opacity,transform;
+}
+
+.app:fullscreen .notification {
+    bottom: 70px;
+}
+
+.notification-body {
+    margin-left: auto;
+    margin-right: 20px;
+    width: 600px;
+    height: 338px;
+    background-color: rgba(255,255,255,.75);
+    background-clip: padding-box;
+    box-shadow: 0 .25rem .75rem rgba(0,0,0,.1);
+    backdrop-filter: blur(10px);
+    border-radius: .25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide-in-right {
+   /* animation: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;*/
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 1.5s ease-in-out,transform 1.5s ease-in-out;
+}
+
+/**
+ * ----------------------------------------
+ * animation slide-in-right
+ * ----------------------------------------
+ */
+@keyframes slide-in-right {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
